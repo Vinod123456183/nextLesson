@@ -60,7 +60,7 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 z-30 bg-white border-b border-gray-100">
-      <div className="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between gap-3">
+      <div className="max-w-3xl mx-auto px-3 sm:px-4 h-16 sm:h-14 flex items-center justify-between gap-2">
         {/* Logo */}
         <Link
           href="/"
@@ -75,7 +75,9 @@ export function Navbar() {
             className="object-contain rounded-md"
           />
 
-          <span className="font-bold text-xl text-gray-900">nextLesson</span>
+          <span className="font-semibold text-base sm:text-xl text-gray-900">
+            nextLesson
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -97,7 +99,7 @@ export function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-shrink-0">
           <ActiveUsers />
 
           {session ? (
@@ -110,7 +112,7 @@ export function Navbar() {
               <div className="relative" ref={menuRef}>
                 <button
                   onClick={() => setMenuOpen((v) => !v)}
-                  className="flex items-center gap-1.5 btn-ghost"
+                  className="flex items-center gap-2 px-2 py-1 rounded-lg hover:bg-gray-100 transition"
                   aria-label="Account menu"
                   aria-expanded={menuOpen}
                   aria-haspopup="true"
@@ -119,16 +121,16 @@ export function Navbar() {
                     <Image
                       src={session.user.image}
                       alt={session.user.name ?? "User"}
-                      width={28}
-                      height={28}
+                      width={36}
+                      height={36}
                       className="rounded-full"
                       unoptimized
                     />
                   ) : (
-                    <UserCircleIcon className="w-7 h-7 text-gray-500" />
+                    <UserCircleIcon className="w-9 h-9 text-gray-500" />
                   )}
 
-                  <span className="text-sm text-gray-700 hidden sm:block max-w-[100px] truncate">
+                  <span className="text-sm text-gray-700 hidden md:block max-w-[100px] truncate">
                     {session.user?.name?.split(" ")[0]}
                   </span>
                 </button>
