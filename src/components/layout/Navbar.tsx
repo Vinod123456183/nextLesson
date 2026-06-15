@@ -121,13 +121,13 @@ export function Navbar() {
                     <Image
                       src={session.user.image}
                       alt={session.user.name ?? "User"}
-                      width={36}
-                      height={36}
+                      width={32}
+                      height={32}
                       className="rounded-full"
                       unoptimized
                     />
                   ) : (
-                    <UserCircleIcon className="w-9 h-9 text-gray-500" />
+                    <UserCircleIcon className="w-8 h-8 text-gray-500" />
                   )}
 
                   <span className="text-sm text-gray-700 hidden md:block max-w-[100px] truncate">
