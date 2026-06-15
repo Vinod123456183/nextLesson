@@ -136,7 +136,7 @@ export default function ProfileClient({
 
   const isEditValid =
     editTitle.trim().length >= 5 &&
-    editBody.trim().length >= 20 &&
+    editBody.trim().length >= 10 &&
     editTags.length > 0;
 
   return (
@@ -310,7 +310,7 @@ export default function ProfileClient({
                 <label className="block text-sm font-medium text-gray-700 mb-1.5">
                   Your experience{" "}
                   <span className="text-gray-400 font-normal">
-                    (20–10,000 chars)
+                    (10–10,000 chars)
                   </span>
                 </label>
                 <TextareaAutosize
