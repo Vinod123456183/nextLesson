@@ -7,6 +7,8 @@
 ![5](Project%20Screenshots/5.png)
 ![6](Project%20Screenshots/6.png)
 
+- current count 110
+
 # nextLesson
 
 A community platform where people share real lessons, tips, and mistakes — tagged by topic so others can search and learn.
