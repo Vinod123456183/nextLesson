@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users — public read, no client writes (admin SDK only)
+    match /users/{uid} {
+      allow read:  if true;
+      allow write: if false;
+    }
+
+    // Posts — public read, no client writes
+    match /posts/{postId} {
+      allow read:  if true;
+      allow write: if false;
+
+      match /likes/{likeId} {
+        allow read:  if true;
+        allow write: if false;
+      }
+    }
+
+    // Tags — public read only
+    match /tags/{tag} {
+      allow read:  if true;
+      allow write: if false;
+    }
+
+    // Presence — anyone can write their own session (via server API route)
+    // Client never writes directly; server uses Admin SDK (bypasses rules).
+    match /presence/{sessionId} {
+      allow read:  if true;
+      allow write: if false;
+    }
+
+    // Deny everything else
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

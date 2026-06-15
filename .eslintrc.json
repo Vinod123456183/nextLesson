@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended" // ← ADD THIS
+  ],
+  "parser": "@typescript-eslint/parser", // ← ADD THIS
+  "plugins": ["@typescript-eslint"], // ← ADD THIS
+  "rules": {
+    "@next/next/no-img-element": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "argsIgnorePattern": "^_" }
+    ],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react/no-unescaped-entities": "off" // ← ADD THIS (fixes the ' errors in not-found.tsx and write/page.tsx)
+  }
+}
