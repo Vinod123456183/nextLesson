@@ -60,11 +60,11 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 z-30 bg-white border-b border-gray-100">
-      <div className="max-w-3xl mx-auto px-3 sm:px-4 h-16 sm:h-14 flex items-center justify-between gap-2">
+      <div className="max-w-3xl mx-auto px-3 sm:px-4 h-16 sm:h-14 flex items-center justify-between gap-1">
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 flex-shrink-0 hover:opacity-90 transition"
+          className="flex items-center gap-1 flex-shrink-0 hover:opacity-90 transition"
         >
           <Image
             src="/logo-light.png"
@@ -99,7 +99,7 @@ export function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-1 flex-shrink-0">
           <ActiveUsers />
 
           {session ? (
@@ -112,7 +112,7 @@ export function Navbar() {
               <div className="relative" ref={menuRef}>
                 <button
                   onClick={() => setMenuOpen((v) => !v)}
-                  className="flex items-center gap-2 px-2 py-1 rounded-lg hover:bg-gray-100 transition"
+                  className="flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-gray-100 transition"
                   aria-label="Account menu"
                   aria-expanded={menuOpen}
                   aria-haspopup="true"
