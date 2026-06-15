@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   description:
     "A community where people share real lessons, tips, and mistakes to help others grow.",
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/favicon.png" },
   openGraph: {
     title: "nextLesson",
     description:

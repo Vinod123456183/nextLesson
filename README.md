@@ -1,3 +1,12 @@
+## Project Screenshots
+
+![1](Project%20Screenshots/1.png)
+![2](Project%20Screenshots/2.png)
+![3](Project%20Screenshots/3.png)
+![4](Project%20Screenshots/4.png)
+![5](Project%20Screenshots/5.png)
+![6](Project%20Screenshots/6.png)
+
 # nextLesson
 
 A community platform where people share real lessons, tips, and mistakes — tagged by topic so others can search and learn.
@@ -11,7 +20,7 @@ A community platform where people share real lessons, tips, and mistakes — tag
 - Like posts (with optimistic UI)
 - View counts
 - User profiles with post stats
-- Author-only delete
+- Author edit , delete
 
 ---
 
